@@ -1,0 +1,31 @@
+brand,website,brightfield_rank,brightfield_funnel_pct,state,abbreviation,method,result,details,policy_url,deliverable,scraped_at
+iDelta,https://delta8vapeoil.com,4,25.6,Ohio,OH,cart_checkout,restricted,"...itions printed on this site. Void Where Prohibited By Law.
+
+Copyright 2026 © iDELT∆8...",,restricted,2026-04-07T19:22:25.318739
+iDelta,https://delta8vapeoil.com,4,25.6,Texas,TX,cart_checkout,restricted,"...itions printed on this site. Void Where Prohibited By Law.
+
+Copyright 2026 © iDELT∆8...",,restricted,2026-04-07T19:23:03.105002
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Ohio,OH,cart_checkout,could_not_add_to_cart,"Locator.scroll_into_view_if_needed: Timeout 29994ms exceeded.
+Call log:
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying sc",,could_not_add_to_cart,2026-04-07T19:23:58.698783
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Texas,TX,cart_checkout,could_not_add_to_cart,"Locator.scroll_into_view_if_needed: Timeout 29996ms exceeded.
+Call log:
+  - attempting scroll into view action
+    2 × waiting for element to be stable
+      - element is not visible
+    - retrying sc",,could_not_add_to_cart,2026-04-07T19:24:54.124312
+enjoy,https://enjoyhemp.co,19,11.5,Ohio,OH,cart_checkout,unclear,No clear signal,,unclear,2026-04-07T19:25:32.863871
+enjoy,https://enjoyhemp.co,19,11.5,Texas,TX,cart_checkout,unclear,No clear signal,,unclear,2026-04-07T19:26:11.803443
+ELYXR,https://www.elyxr.com,23,11.0,Ohio,OH,cart_checkout,restricted,"...itions printed on this site. Void Where Prohibited By Law.
+
+Notifications
+
+There are no payment methods available. Please contact...",,restricted,2026-04-07T19:26:38.788050
+ELYXR,https://www.elyxr.com,23,11.0,Texas,TX,cart_checkout,restricted,"...itions printed on this site. Void Where Prohibited By Law.
+
+Notifications
+
+There are no payment methods available. Please contact...",,restricted,2026-04-07T19:27:05.231452

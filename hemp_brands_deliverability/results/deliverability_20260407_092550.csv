@@ -1,0 +1,5 @@
+brand,website,state,abbreviation,method,result,details,deliverable,scraped_at
+Mellow Fellow,https://mellowfellow.fun,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: shipping restrictions,likely_yes,2026-04-07T09:25:50.601771
+Mellow Fellow,https://mellowfellow.fun,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: shipping restrictions,likely_yes,2026-04-07T09:25:50.601775
+Mellow Fellow,https://mellowfellow.fun,Ohio,OH,cart_checkout,could_not_add_to_cart,Add to cart button not found or failed,likely_yes,2026-04-07T09:25:50.601777
+Mellow Fellow,https://mellowfellow.fun,Texas,TX,cart_checkout,could_not_add_to_cart,Add to cart button not found or failed,likely_yes,2026-04-07T09:25:50.601779

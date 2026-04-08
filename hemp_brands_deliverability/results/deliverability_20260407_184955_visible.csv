@@ -1,0 +1,11 @@
+brand,website,brightfield_rank,brightfield_funnel_pct,state,abbreviation,method,result,details,policy_url,deliverable,scraped_at
+iDelta,https://delta8vapeoil.com,4,25.6,Ohio,OH,cart_checkout,could_not_reach_checkout,Ended up at https://delta8vapeoil.com/cart/,,could_not_reach_checkout,2026-04-07T18:49:55.374261
+iDelta,https://delta8vapeoil.com,4,25.6,Texas,TX,cart_checkout,could_not_reach_checkout,Ended up at https://delta8vapeoil.com/cart/,,could_not_reach_checkout,2026-04-07T18:49:55.374274
+Hempbombs,https://www.hempbombs.com,12,14.1,Ohio,OH,cart_checkout,could_not_add_to_cart,Add-to-cart failed,,could_not_add_to_cart,2026-04-07T18:49:55.374281
+Hempbombs,https://www.hempbombs.com,12,14.1,Texas,TX,cart_checkout,could_not_add_to_cart,Add-to-cart failed,,could_not_add_to_cart,2026-04-07T18:49:55.374286
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Ohio,OH,cart_checkout,cart_empty_at_checkout,Cart was empty at checkout,,cart_empty_at_checkout,2026-04-07T18:49:55.374293
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Texas,TX,cart_checkout,cart_empty_at_checkout,Cart was empty at checkout,,cart_empty_at_checkout,2026-04-07T18:49:55.374299
+enjoy,https://enjoyhemp.co,19,11.5,Ohio,OH,cart_checkout,cart_empty_at_checkout,Cart was empty at checkout,,cart_empty_at_checkout,2026-04-07T18:49:55.374304
+enjoy,https://enjoyhemp.co,19,11.5,Texas,TX,cart_checkout,cart_empty_at_checkout,Cart was empty at checkout,,cart_empty_at_checkout,2026-04-07T18:49:55.374309
+ELYXR,https://www.elyxr.com,23,11.0,Ohio,OH,cart_checkout,error,Could not load product page,,error,2026-04-07T18:49:55.374314
+ELYXR,https://www.elyxr.com,23,11.0,Texas,TX,cart_checkout,error,Could not load product page,,error,2026-04-07T18:49:55.374319

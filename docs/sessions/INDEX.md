@@ -1,0 +1,10 @@
+# Session Index
+
+## Sessions
+
+| Date | File | Summary |
+|------|------|---------|
+| 2026-04-06 | [001-supplement-gummy-market-research.md](001-supplement-gummy-market-research.md) | Research on US supplement gummy market size, segments, key players, and comparison to cannabis/hemp gummy market |
+| 2026-04-06 | [002-ceo-critique-fixes.md](002-ceo-critique-fixes.md) | CEO-level critique of dashboard: 5 fixes — revenue range, confidence badges, growth hero, regulatory scenarios, supplement context |
+| 2026-04-06 | [003-supplement-dashboard.md](003-supplement-dashboard.md) | New supplement market dashboard — 6,146 Amazon products, 13 use cases, two Marimekko charts, Mood whitespace analysis |
+| 2026-04-07 | [004-supplement-dashboard-v2.md](004-supplement-dashboard-v2.md) | v2 iteration: CEO feedback fixes, Keepa integration, sub-categories, THC relevance, generic-first scraping, GitHub Pages hosting |

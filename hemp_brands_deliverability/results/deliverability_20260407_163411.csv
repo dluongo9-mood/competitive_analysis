@@ -1,0 +1,17 @@
+brand,website,brightfield_rank,brightfield_funnel_pct,state,abbreviation,method,result,details,policy_url,deliverable,scraped_at
+iDelta,https://delta8vapeoil.com,4,25.6,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://delta8vapeoil.com/pages/shipping,likely_yes,2026-04-07T16:34:11.399650
+iDelta,https://delta8vapeoil.com,4,25.6,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://delta8vapeoil.com/pages/shipping,likely_yes,2026-04-07T16:34:11.399655
+iDelta,https://delta8vapeoil.com,4,25.6,Ohio,OH,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T16:34:11.399656
+iDelta,https://delta8vapeoil.com,4,25.6,Texas,TX,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T16:34:11.399658
+Hempbombs,https://www.hempbombs.com,12,14.1,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://www.hempbombs.com/policies/shipping-policy,likely_yes,2026-04-07T16:34:11.399661
+Hempbombs,https://www.hempbombs.com,12,14.1,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://www.hempbombs.com/policies/shipping-policy,likely_yes,2026-04-07T16:34:11.399663
+Hempbombs,https://www.hempbombs.com,12,14.1,Ohio,OH,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T16:34:11.399665
+Hempbombs,https://www.hempbombs.com,12,14.1,Texas,TX,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T16:34:11.399667
+enjoy,https://enjoyhemp.co,19,11.5,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://enjoyhemp.co/shop/,likely_yes,2026-04-07T16:34:11.399669
+enjoy,https://enjoyhemp.co,19,11.5,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://enjoyhemp.co/shop/,likely_yes,2026-04-07T16:34:11.399671
+enjoy,https://enjoyhemp.co,19,11.5,Ohio,OH,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T16:34:11.399673
+enjoy,https://enjoyhemp.co,19,11.5,Texas,TX,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T16:34:11.399675
+ELYXR,https://www.elyxr.com,23,11.0,Ohio,OH,shipping_policy,has_restrictions_other_states,"Restriction language found but Ohio not mentioned: OH, restricted state, restricted states",https://www.elyxr.com/policies/shipping-policy,likely_yes,2026-04-07T16:34:11.399676
+ELYXR,https://www.elyxr.com,23,11.0,Texas,TX,shipping_policy,has_restrictions_other_states,"Restriction language found but Texas not mentioned: OH, restricted state, restricted states",https://www.elyxr.com/policies/shipping-policy,likely_yes,2026-04-07T16:34:11.399678
+ELYXR,https://www.elyxr.com,23,11.0,Ohio,OH,cart_checkout,cart_empty_at_checkout,Cart was empty when reaching checkout — add-to-cart may not have worked,,likely_yes,2026-04-07T16:34:11.399680
+ELYXR,https://www.elyxr.com,23,11.0,Texas,TX,cart_checkout,cart_empty_at_checkout,Cart was empty when reaching checkout — add-to-cart may not have worked,,likely_yes,2026-04-07T16:34:11.399681

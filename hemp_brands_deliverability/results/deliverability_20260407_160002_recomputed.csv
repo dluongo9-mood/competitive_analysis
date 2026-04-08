@@ -1,0 +1,81 @@
+brand,website,brightfield_rank,brightfield_funnel_pct,state,abbreviation,method,result,details,policy_url,deliverable,scraped_at
+Cookies,https://shop.cookies.co,1,30.6,Ohio,OH,cart_checkout,restricted_on_page,Restriction language found on checkout page before entering zip,,no,2026-04-07T10:10:34.485397
+Cookies,https://shop.cookies.co,1,30.6,Ohio,OH,shipping_policy,has_restrictions_other_states,"Restriction language found but Ohio not mentioned: OH, do not ship",https://shop.cookies.co/policies/shipping-policy,no,2026-04-07T10:10:34.485391
+Cookies,https://shop.cookies.co,1,30.6,Texas,TX,cart_checkout,restricted_on_page,Restriction language found on checkout page before entering zip,,no,2026-04-07T10:10:34.485399
+Cookies,https://shop.cookies.co,1,30.6,Texas,TX,shipping_policy,has_restrictions_other_states,"Restriction language found but Texas not mentioned: OH, do not ship",https://shop.cookies.co/policies/shipping-policy,no,2026-04-07T10:10:34.485396
+Cheech and Chong,https://shopcheechandchong.com,2,29.7,Ohio,OH,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T10:10:34.485403
+Cheech and Chong,https://shopcheechandchong.com,2,29.7,Ohio,OH,shipping_policy,no_restriction_found,No restriction language found mentioning Ohio,https://shopcheechandchong.com/pages/faq,n/a,2026-04-07T10:10:34.485401
+Cheech and Chong,https://shopcheechandchong.com,2,29.7,Texas,TX,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T10:10:34.485405
+Cheech and Chong,https://shopcheechandchong.com,2,29.7,Texas,TX,shipping_policy,no_restriction_found,No restriction language found mentioning Texas,https://shopcheechandchong.com/pages/faq,n/a,2026-04-07T10:10:34.485402
+iDelta,https://delta8vapeoil.com,4,25.6,Ohio,OH,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T10:10:34.485410
+iDelta,https://delta8vapeoil.com,4,25.6,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://delta8vapeoil.com/pages/shipping,likely_yes,2026-04-07T10:10:34.485408
+iDelta,https://delta8vapeoil.com,4,25.6,Texas,TX,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T10:10:34.485412
+iDelta,https://delta8vapeoil.com,4,25.6,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://delta8vapeoil.com/pages/shipping,likely_yes,2026-04-07T10:10:34.485409
+Mood,https://mood.com,6,18.6,Ohio,OH,cart_checkout,deliverable,Shipping options available (found 'shipping method' on checkout page),,yes,2026-04-07T10:10:34.485416
+Mood,https://mood.com,6,18.6,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://mood.com/shipping,yes,2026-04-07T10:10:34.485413
+Mood,https://mood.com,6,18.6,Texas,TX,cart_checkout,deliverable,Shipping options available (found 'shipping method' on checkout page),,yes,2026-04-07T10:10:34.485418
+Mood,https://mood.com,6,18.6,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://mood.com/shipping,yes,2026-04-07T10:10:34.485415
+Mellow Fellow,https://mellowfellow.fun,7,16.9,Ohio,OH,cart_checkout,deliverable,Shipping options available (found 'free shipping' on checkout page),,yes,2026-04-07T10:10:34.485422
+Mellow Fellow,https://mellowfellow.fun,7,16.9,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: shipping restrictions,https://mellowfellow.fun/policies/shipping-policy,yes,2026-04-07T10:10:34.485420
+Mellow Fellow,https://mellowfellow.fun,7,16.9,Texas,TX,cart_checkout,deliverable,Shipping options available (found 'free shipping' on checkout page),,yes,2026-04-07T10:10:34.485424
+Mellow Fellow,https://mellowfellow.fun,7,16.9,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: shipping restrictions,https://mellowfellow.fun/policies/shipping-policy,yes,2026-04-07T10:10:34.485421
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Ohio,OH,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T10:10:34.485429
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Ohio,OH,shipping_policy,has_restrictions_other_states,"Restriction language found but Ohio not mentioned: OH, do not ship",https://mysticlabsd8.com/shipping-policy,likely_yes,2026-04-07T10:10:34.485426
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Texas,TX,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T10:10:34.485430
+Mystic Labs,https://mysticlabsd8.com,9,16.1,Texas,TX,shipping_policy,has_restrictions_other_states,"Restriction language found but Texas not mentioned: OH, do not ship",https://mysticlabsd8.com/shipping-policy,likely_yes,2026-04-07T10:10:34.485428
+Delta Munchies,https://deltamunchies.com,10,14.9,Ohio,OH,cart_checkout,restricted_on_page,Restriction language found on checkout page before entering zip,,no,2026-04-07T10:10:34.485434
+Delta Munchies,https://deltamunchies.com,10,14.9,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://deltamunchies.com/policies/shipping-policy,no,2026-04-07T10:10:34.485432
+Delta Munchies,https://deltamunchies.com,10,14.9,Texas,TX,cart_checkout,restricted_on_page,Restriction language found on checkout page before entering zip,,no,2026-04-07T10:10:34.485436
+Delta Munchies,https://deltamunchies.com,10,14.9,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://deltamunchies.com/policies/shipping-policy,no,2026-04-07T10:10:34.485433
+STIIIZY Hemp,https://www.stiiizy.com,11,14.3,Ohio,OH,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T10:10:34.485440
+STIIIZY Hemp,https://www.stiiizy.com,11,14.3,Ohio,OH,shipping_policy,no_restriction_found,No restriction language found mentioning Ohio,https://www.stiiizy.com/policies/shipping-policy,n/a,2026-04-07T10:10:34.485437
+STIIIZY Hemp,https://www.stiiizy.com,11,14.3,Texas,TX,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T10:10:34.485441
+STIIIZY Hemp,https://www.stiiizy.com,11,14.3,Texas,TX,shipping_policy,no_restriction_found,No restriction language found mentioning Texas,https://www.stiiizy.com/policies/shipping-policy,n/a,2026-04-07T10:10:34.485439
+Hempbombs,https://www.hempbombs.com,12,14.1,Ohio,OH,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T10:10:34.485446
+Hempbombs,https://www.hempbombs.com,12,14.1,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://www.hempbombs.com/policies/shipping-policy,likely_yes,2026-04-07T10:10:34.485443
+Hempbombs,https://www.hempbombs.com,12,14.1,Texas,TX,cart_checkout,could_not_reach_checkout,Could not navigate to checkout page,,likely_yes,2026-04-07T10:10:34.485447
+Hempbombs,https://www.hempbombs.com,12,14.1,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://www.hempbombs.com/policies/shipping-policy,likely_yes,2026-04-07T10:10:34.485445
+CBDistillery,https://www.cbdistillery.com,13,13.5,Ohio,OH,cart_checkout,no_thca_product_found,Could not find product,,n/a,2026-04-07T10:10:34.485452
+CBDistillery,https://www.cbdistillery.com,13,13.5,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://www.cbdistillery.com/policies/shipping-policy,n/a,2026-04-07T10:10:34.485449
+CBDistillery,https://www.cbdistillery.com,13,13.5,Texas,TX,cart_checkout,no_thca_product_found,Could not find product,,n/a,2026-04-07T10:10:34.485453
+CBDistillery,https://www.cbdistillery.com,13,13.5,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://www.cbdistillery.com/policies/shipping-policy,n/a,2026-04-07T10:10:34.485450
+incredibles,https://iloveincredibles.com,14,13.2,Ohio,OH,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823097
+incredibles,https://iloveincredibles.com,14,13.2,Ohio,OH,shipping_policy,no_restriction_found,No restriction language found mentioning Ohio,https://iloveincredibles.com/pages/shipping,n/a,2026-04-07T15:51:57.823089
+incredibles,https://iloveincredibles.com,14,13.2,Texas,TX,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823098
+incredibles,https://iloveincredibles.com,14,13.2,Texas,TX,shipping_policy,no_restriction_found,No restriction language found mentioning Texas,https://iloveincredibles.com/pages/shipping,n/a,2026-04-07T15:51:57.823095
+HoneyRoot,https://honeyrootwellness.com,15,12.7,Ohio,OH,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823103
+HoneyRoot,https://honeyrootwellness.com,15,12.7,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: cannot ship,https://honeyrootwellness.com/policies/shipping-policy,n/a,2026-04-07T15:51:57.823100
+HoneyRoot,https://honeyrootwellness.com,15,12.7,Texas,TX,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823104
+HoneyRoot,https://honeyrootwellness.com,15,12.7,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: cannot ship,https://honeyrootwellness.com/policies/shipping-policy,n/a,2026-04-07T15:51:57.823101
+Koi CBD,https://koicbd.com,16,12.7,Ohio,OH,cart_checkout,deliverable,Shipping options available (found 'free shipping' on checkout page),,yes,2026-04-07T15:51:57.823110
+Koi CBD,https://koicbd.com,16,12.7,Ohio,OH,shipping_policy,has_restrictions_other_states,"Restriction language found but Ohio not mentioned: does not ship, shipping restrictions",https://koicbd.com/shipping-policy,yes,2026-04-07T15:51:57.823106
+Koi CBD,https://koicbd.com,16,12.7,Texas,TX,cart_checkout,deliverable,Shipping options available (found 'free shipping' on checkout page),,yes,2026-04-07T15:51:57.823112
+Koi CBD,https://koicbd.com,16,12.7,Texas,TX,shipping_policy,has_restrictions_other_states,"Restriction language found but Texas not mentioned: does not ship, shipping restrictions",https://koicbd.com/shipping-policy,yes,2026-04-07T15:51:57.823107
+Moonwlkr,https://moonwlkr.com,17,12.4,Ohio,OH,cart_checkout,deliverable,Shipping options available (found 'shipping method' on checkout page),,yes,2026-04-07T15:51:57.823116
+Moonwlkr,https://moonwlkr.com,17,12.4,Ohio,OH,shipping_policy,possibly_restricted,"State mentioned with keywords: ohio, texas, OH, do not ship",https://moonwlkr.com/policies/shipping-policy,yes,2026-04-07T15:51:57.823113
+Moonwlkr,https://moonwlkr.com,17,12.4,Texas,TX,cart_checkout,deliverable,Shipping options available (found 'shipping method' on checkout page),,yes,2026-04-07T15:51:57.823117
+Moonwlkr,https://moonwlkr.com,17,12.4,Texas,TX,shipping_policy,possibly_restricted,"State mentioned with keywords: ohio, texas, OH, do not ship",https://moonwlkr.com/policies/shipping-policy,yes,2026-04-07T15:51:57.823115
+Space Gods,https://shopspacegods.com,18,12.1,Ohio,OH,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823122
+Space Gods,https://shopspacegods.com,18,12.1,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: does not ship,https://shopspacegods.com/pages/shipping-policy,n/a,2026-04-07T15:51:57.823119
+Space Gods,https://shopspacegods.com,18,12.1,Texas,TX,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823123
+Space Gods,https://shopspacegods.com,18,12.1,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: does not ship,https://shopspacegods.com/pages/shipping-policy,n/a,2026-04-07T15:51:57.823121
+enjoy,https://enjoyhemp.co,19,11.5,Ohio,OH,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T15:51:57.823131
+enjoy,https://enjoyhemp.co,19,11.5,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://enjoyhemp.co/shop/,likely_yes,2026-04-07T15:51:57.823125
+enjoy,https://enjoyhemp.co,19,11.5,Texas,TX,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T15:51:57.823132
+enjoy,https://enjoyhemp.co,19,11.5,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://enjoyhemp.co/shop/,likely_yes,2026-04-07T15:51:57.823129
+Torch,https://torchhemp.com,20,11.4,Ohio,OH,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823138
+Torch,https://torchhemp.com,20,11.4,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://torchhemp.com/policies/shipping-policy,n/a,2026-04-07T15:51:57.823135
+Torch,https://torchhemp.com,20,11.4,Texas,TX,cart_checkout,no_thca_product_found,Could not find a THCA product to add to cart,,n/a,2026-04-07T15:51:57.823140
+Torch,https://torchhemp.com,20,11.4,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://torchhemp.com/policies/shipping-policy,n/a,2026-04-07T15:51:57.823136
+TRE House,https://trehouse.com,21,11.4,Ohio,OH,cart_checkout,deliverable,Shipping options available (found 'free shipping' on checkout page),,yes,2026-04-07T15:51:57.823144
+TRE House,https://trehouse.com,21,11.4,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: OH,https://trehouse.com/pages/shipping-information,yes,2026-04-07T15:51:57.823141
+TRE House,https://trehouse.com,21,11.4,Texas,TX,cart_checkout,deliverable,Shipping options available (found 'free shipping' on checkout page),,yes,2026-04-07T15:51:57.823145
+TRE House,https://trehouse.com,21,11.4,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: OH,https://trehouse.com/pages/shipping-information,yes,2026-04-07T15:51:57.823142
+Exhale,https://www.exhalewell.com,22,11.3,Ohio,OH,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T15:51:57.823149
+Exhale,https://www.exhalewell.com,22,11.3,Ohio,OH,shipping_policy,has_restrictions_other_states,Restriction language found but Ohio not mentioned: do not ship,https://www.exhalewell.com/shipping-policy,likely_yes,2026-04-07T15:51:57.823146
+Exhale,https://www.exhalewell.com,22,11.3,Texas,TX,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T15:51:57.823150
+Exhale,https://www.exhalewell.com,22,11.3,Texas,TX,shipping_policy,has_restrictions_other_states,Restriction language found but Texas not mentioned: do not ship,https://www.exhalewell.com/shipping-policy,likely_yes,2026-04-07T15:51:57.823148
+ELYXR,https://www.elyxr.com,23,11.0,Ohio,OH,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T15:51:57.823154
+ELYXR,https://www.elyxr.com,23,11.0,Ohio,OH,shipping_policy,has_restrictions_other_states,"Restriction language found but Ohio not mentioned: OH, restricted state, restricted states",https://www.elyxr.com/policies/shipping-policy,likely_yes,2026-04-07T15:51:57.823152
+ELYXR,https://www.elyxr.com,23,11.0,Texas,TX,cart_checkout,could_not_enter_zip,No zip code input field found on checkout page,,likely_yes,2026-04-07T15:51:57.823156
+ELYXR,https://www.elyxr.com,23,11.0,Texas,TX,shipping_policy,has_restrictions_other_states,"Restriction language found but Texas not mentioned: OH, restricted state, restricted states",https://www.elyxr.com/policies/shipping-policy,likely_yes,2026-04-07T15:51:57.823153
