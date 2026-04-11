@@ -43,6 +43,10 @@ SUB_CATEGORIES = {
         "Menopause": r"menopause|hot flash|black cohosh",
         "Fertility": r"fertil|conceiv|ovulat",
         "Vaginal Health": r"vaginal|ph balance|yeast|uro\b",
+        "Women's Multivitamin": r"women.s\s*(?:multi|daily|one\s*a\s*day)|multivitamin.*women|centrum.*women",
+        "Women's Hair/Beauty": r"women.*(?:hair|collagen|biotin|skin|nail)|(?:hair|collagen|biotin).*women",
+        "Women's Probiotic": r"women.*probiotic|probiotic.*women|feminine.*probiotic",
+        "Women's General": r"\bwomen\b|\bwoman\b|\bher\b.*(?:supplement|vitamin)",
     },
     "General Wellness": {
         "Multivitamin": r"multivitamin|multi[\s-]*vitamin|one\s*a\s*day",
@@ -75,11 +79,13 @@ SUB_CATEGORIES = {
         "Nootropics": r"nootropic",
         "Memory": r"memory|cognitive|prevagen|neuriva",
         "Focus": r"focus|concentrat|attention",
+        "General Brain": r"brain|mental",
     },
     "Pain Relief": {
         "Turmeric/Curcumin": r"turmeric|curcumin",
         "Glucosamine/Joint": r"glucosamine|chondroitin|joint",
         "General Pain": r"pain|inflamm|ache",
+        "Bone/Calcium": r"bone|calcium|vitamin\s*d3",
     },
     "Mood": {
         "5-HTP/Serotonin": r"5-htp|serotonin",
@@ -103,18 +109,26 @@ SUB_CATEGORIES = {
         "B Vitamins": r"b12|b-12|vitamin\s*b|b\s*complex",
         "Maca/Adaptogens": r"maca|ginseng|rhodiola",
         "Creatine": r"creatine",
+        "Iron/Energy": r"\biron\b.*energy|energy.*\biron\b",
+        "General Energy": r"energy",
     },
     "Immunity": {
         "Elderberry": r"elderberry|sambucus",
         "Vitamin C": r"vitamin\s*c|ascorbic",
         "Zinc": r"\bzinc\b",
         "Mushroom Immune": r"mushroom.*immun|reishi|chaga|turkey\s*tail",
+        "General Immune": r"immun",
     },
     "Weight & Metabolism": {
         "ACV/Keto": r"apple\s*cider|acv|keto",
         "Appetite Control": r"appetite|hunger|satiet",
         "Fat Burn": r"fat\s*burn|thermogenic|garcinia|green\s*coffee",
         "GLP-1/Berberine": r"glp|berberine",
+        "General Weight": r"weight|metabolism",
+    },
+    "Intimacy": {
+        "Libido": r"libido|sex|arousal|aphrodisiac",
+        "Maca": r"maca.*libido|horny\s*goat",
     },
 }
 
@@ -1117,6 +1131,118 @@ def chart_brightfield_overlay(products, bf_demand):
     return fig
 
 
+def load_google_trends():
+    """Load Google Trends data if available."""
+    trends_csv = "google_trends.csv"
+    try:
+        rows = []
+        with open(trends_csv, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                r["interest"] = int(r["interest"])
+                rows.append(r)
+        print(f"  Google Trends: {len(rows):,} data points")
+        return rows
+    except FileNotFoundError:
+        print(f"  Google Trends: not available (run scrape_google_trends.py)")
+        return []
+
+
+def _no_trends_fig(title):
+    fig = go.Figure()
+    fig.add_annotation(text="Google Trends data not available yet — run scrape_google_trends.py",
+                       showarrow=False, font=dict(size=14))
+    fig.update_layout(height=400, template="plotly_white", title=title)
+    return fig
+
+
+TRENDS_PALETTE = [
+    "#2563EB", "#DC2626", "#059669", "#D97706", "#7C3AED",
+    "#DB2777", "#0891B2", "#65A30D", "#CA8A04", "#6366F1",
+    "#E11D48", "#0D9488", "#EA580C", "#4F46E5",
+]
+
+
+def chart_trends_by_usecase(trends_rows):
+    """Line chart: Google Trends search interest for THC + functional use cases."""
+    if not trends_rows:
+        return _no_trends_fig("Google Trends: THC × Functional Use Case Interest")
+
+    # Aggregate: average interest per category per date (exclude baseline)
+    from collections import defaultdict
+    cat_date_vals = defaultdict(lambda: defaultdict(list))
+    for r in trends_rows:
+        if r["type"] == "baseline":
+            continue
+        cat_date_vals[r["category"]][r["date"]].append(r["interest"])
+
+    fig = go.Figure()
+    cat_avg = {cat: sum(v for vals in dates.values() for v in vals) / max(sum(len(v) for v in dates.values()), 1)
+               for cat, dates in cat_date_vals.items()}
+    sorted_cats = sorted(cat_avg.keys(), key=lambda c: -cat_avg[c])
+
+    for i, cat in enumerate(sorted_cats):
+        dates = cat_date_vals[cat]
+        sorted_dates = sorted(dates.keys())
+        avg_vals = [sum(dates[d]) / len(dates[d]) for d in sorted_dates]
+        fig.add_trace(go.Scatter(
+            x=sorted_dates, y=avg_vals, name=cat,
+            mode="lines",
+            line=dict(color=TRENDS_PALETTE[i % len(TRENDS_PALETTE)], width=2),
+            hovertext=[f"<b>{cat}</b><br>{d}: {v:.0f}" for d, v in zip(sorted_dates, avg_vals)],
+            hoverinfo="text",
+        ))
+
+    fig.update_layout(
+        title="Google Trends: THC × Functional Use Case Search Interest<br>"
+              "<sup>How much are consumers searching for THC/CBD + specific functional benefits? "
+              "e.g. 'THC for pain', 'CBD for sleep'. Weekly relative interest (0-100). Source: Google Trends, US, 5yr.</sup>",
+        xaxis_title="Week", yaxis_title="Relative Interest (0–100)",
+        height=550, template="plotly_white",
+        legend=dict(font=dict(size=10)),
+    )
+    return fig
+
+
+def chart_trends_functional_vs_baseline(trends_rows):
+    """Compare functional THC searches vs generic THC searches over time."""
+    if not trends_rows:
+        return _no_trends_fig("Google Trends: Functional vs Generic THC")
+
+    from collections import defaultdict
+    type_date_vals = defaultdict(lambda: defaultdict(list))
+    for r in trends_rows:
+        type_date_vals[r["type"]][r["date"]].append(r["interest"])
+
+    fig = go.Figure()
+    labels = {
+        "functional": ("Functional THC Searches (avg)", "#059669"),
+        "baseline": ("Generic THC/CBD Searches (avg)", "#DC2626"),
+    }
+    for typ, (label, color) in labels.items():
+        dates = type_date_vals.get(typ, {})
+        if not dates:
+            continue
+        sorted_dates = sorted(dates.keys())
+        avg_vals = [sum(dates[d]) / len(dates[d]) for d in sorted_dates]
+        fig.add_trace(go.Scatter(
+            x=sorted_dates, y=avg_vals, name=label,
+            mode="lines",
+            line=dict(color=color, width=3),
+            hovertext=[f"<b>{label}</b><br>{d}: {v:.0f}" for d, v in zip(sorted_dates, avg_vals)],
+            hoverinfo="text",
+        ))
+
+    fig.update_layout(
+        title="Google Trends: Functional THC vs Generic THC Searches<br>"
+              "<sup>Are consumers increasingly searching for THC with specific benefits (sleep, pain, anxiety) vs just 'THC gummies'? "
+              "Source: Google Trends, US, 5yr.</sup>",
+        xaxis_title="Week", yaxis_title="Relative Interest (0–100)",
+        height=450, template="plotly_white",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+    )
+    return fig
+
+
 def build_html(products):
     """Generate the full dashboard HTML."""
     total = len(products)
@@ -1158,6 +1284,11 @@ def build_html(products):
     chart_rev_brand = fig_to_html(chart_reviews_by_brand(keepa_rows, products))
     chart_rev_uc = fig_to_html(chart_reviews_by_usecase(keepa_rows, products))
     chart_rev_ff = fig_to_html(chart_reviews_by_formfactor(keepa_rows, products))
+
+    # Google Trends charts
+    trends_rows = load_google_trends()
+    chart_trends_uc = fig_to_html(chart_trends_by_usecase(trends_rows))
+    chart_trends_vs = fig_to_html(chart_trends_functional_vs_baseline(trends_rows))
 
     # Summary table rows
     table_rows = build_summary_table(products, keepa_rows)
@@ -1326,6 +1457,13 @@ def build_html(products):
     <p>Brightfield survey: what gummy THC consumers want. Bars: supplement category size on Amazon. Overlap = competitive opportunity.</p>
   </div>
   <div class="card full-width">{chart_bf}</div>
+
+  <div class="section-header">
+    <h2>Google Trends: THC × Functional Search Interest</h2>
+    <p>Are consumers searching for THC/CBD with specific functional benefits? Weekly Google Trends data (relative interest, 0-100) for queries like "THC for sleep", "CBD for pain relief". Normalized to "THC gummies" baseline.</p>
+  </div>
+  <div class="card full-width">{chart_trends_uc}</div>
+  <div class="card full-width">{chart_trends_vs}</div>
 
   <div class="section-header">
     <h2>Review Count Analysis</h2>
