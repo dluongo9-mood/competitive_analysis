@@ -94,6 +94,18 @@ def namespace_ids(html: str, prefix: str, ids: list[str]) -> str:
         # getElementById('...') and getElementById("...") in JS
         html = html.replace(f"getElementById('{eid}')", f"getElementById('{prefixed}')")
         html = html.replace(f'getElementById("{eid}")', f'getElementById("{prefixed}")')
+        # Bare string references in JS arrays/objects like ['dt-search', ...]
+        html = html.replace(f"'{eid}'", f"'{prefixed}'")
+        html = html.replace(f'"{eid}"', f'"{prefixed}"')
+    # Undo double-prefixing on id= attributes (already replaced above, then hit again by bare string)
+    for eid in ids:
+        prefixed = f"{prefix}-{eid}"
+        double = f"{prefix}-{prefixed}"
+        html = html.replace(f'id="{double}"', f'id="{prefixed}"')
+        html = html.replace(f"getElementById('{double}')", f"getElementById('{prefixed}')")
+        html = html.replace(f'getElementById("{double}")', f'getElementById("{prefixed}")')
+        html = html.replace(f"'{double}'", f"'{prefixed}'")
+        html = html.replace(f'"{double}"', f'"{prefixed}"')
     return html
 
 
