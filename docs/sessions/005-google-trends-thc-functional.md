@@ -20,7 +20,7 @@ Built a Google Trends scraper and two new dashboard charts that track consumer s
 |------|--------|-------------|
 | `scrape_google_trends.py` | created | Google Trends scraper — 31 keywords, 8 batches, cross-batch normalization, `--resume` support |
 | `google_trends.csv` | created | Output data: 8,091 rows (261 weeks × 31 keywords) |
-| `build_supplement_dashboard.py` | modified | Added `load_google_trends()`, `chart_trends_by_usecase()`, `chart_trends_functional_vs_baseline()`, `_no_trends_fig()` + HTML section |
+| `build_supplement_dashboard.py` | modified | Added `load_google_trends()`, `chart_trends_by_usecase()`, `chart_trends_functional_vs_baseline()`, `_no_trends_fig()` + HTML section. Charts resample weekly data to monthly averages for readability. |
 
 ## Decisions
 
@@ -52,7 +52,10 @@ Built a Google Trends scraper and two new dashboard charts that track consumer s
 | Beauty | CBD for skin, hemp for hair |
 | **Baseline** | THC gummies, delta 8 gummies, delta 9 gummies, CBD gummies, hemp gummies |
 
+- **Monthly resampling**: Initial weekly charts were too noisy with 14 categories. Resampled to monthly averages in the chart functions (not in the CSV — raw weekly data preserved for future use).
+
 ## Context for Future Sessions
+- Project was copied to `/Users/davidluongo/Claude/competitive_insights/` for Claude session management. Both locations share the same git remote.
 - Scraper at `scrape_google_trends.py` — rerun anytime to refresh data (`python3 scrape_google_trends.py`). Use `--resume` to skip already-completed batches.
 - Keywords are easily editable in `CATEGORY_KEYWORDS` and `THC_BASELINE_KEYWORDS` dicts at the top of the scraper.
 - Dashboard integration follows the same pattern as Keepa: `load_google_trends()` → chart functions → HTML section in `build_html()`. Graceful degradation if CSV is missing.

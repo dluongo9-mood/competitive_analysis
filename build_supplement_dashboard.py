@@ -1167,36 +1167,37 @@ def chart_trends_by_usecase(trends_rows):
     if not trends_rows:
         return _no_trends_fig("Google Trends: THC × Functional Use Case Interest")
 
-    # Aggregate: average interest per category per date (exclude baseline)
+    # Aggregate: average interest per category per month (exclude baseline)
     from collections import defaultdict
-    cat_date_vals = defaultdict(lambda: defaultdict(list))
+    cat_month_vals = defaultdict(lambda: defaultdict(list))
     for r in trends_rows:
         if r["type"] == "baseline":
             continue
-        cat_date_vals[r["category"]][r["date"]].append(r["interest"])
+        month = r["date"][:7]  # YYYY-MM
+        cat_month_vals[r["category"]][month].append(r["interest"])
 
     fig = go.Figure()
-    cat_avg = {cat: sum(v for vals in dates.values() for v in vals) / max(sum(len(v) for v in dates.values()), 1)
-               for cat, dates in cat_date_vals.items()}
+    cat_avg = {cat: sum(v for vals in months.values() for v in vals) / max(sum(len(v) for v in months.values()), 1)
+               for cat, months in cat_month_vals.items()}
     sorted_cats = sorted(cat_avg.keys(), key=lambda c: -cat_avg[c])
 
     for i, cat in enumerate(sorted_cats):
-        dates = cat_date_vals[cat]
-        sorted_dates = sorted(dates.keys())
-        avg_vals = [sum(dates[d]) / len(dates[d]) for d in sorted_dates]
+        months = cat_month_vals[cat]
+        sorted_months = sorted(months.keys())
+        avg_vals = [sum(months[m]) / len(months[m]) for m in sorted_months]
         fig.add_trace(go.Scatter(
-            x=sorted_dates, y=avg_vals, name=cat,
+            x=sorted_months, y=avg_vals, name=cat,
             mode="lines",
             line=dict(color=TRENDS_PALETTE[i % len(TRENDS_PALETTE)], width=2),
-            hovertext=[f"<b>{cat}</b><br>{d}: {v:.0f}" for d, v in zip(sorted_dates, avg_vals)],
+            hovertext=[f"<b>{cat}</b><br>{m}: {v:.0f}" for m, v in zip(sorted_months, avg_vals)],
             hoverinfo="text",
         ))
 
     fig.update_layout(
         title="Google Trends: THC × Functional Use Case Search Interest<br>"
               "<sup>How much are consumers searching for THC/CBD + specific functional benefits? "
-              "e.g. 'THC for pain', 'CBD for sleep'. Weekly relative interest (0-100). Source: Google Trends, US, 5yr.</sup>",
-        xaxis_title="Week", yaxis_title="Relative Interest (0–100)",
+              "e.g. 'THC for pain', 'CBD for sleep'. Monthly avg relative interest (0-100). Source: Google Trends, US, 5yr.</sup>",
+        xaxis_title="Month", yaxis_title="Relative Interest (0–100)",
         height=550, template="plotly_white",
         legend=dict(font=dict(size=10)),
     )
@@ -1209,9 +1210,10 @@ def chart_trends_functional_vs_baseline(trends_rows):
         return _no_trends_fig("Google Trends: Functional vs Generic THC")
 
     from collections import defaultdict
-    type_date_vals = defaultdict(lambda: defaultdict(list))
+    type_month_vals = defaultdict(lambda: defaultdict(list))
     for r in trends_rows:
-        type_date_vals[r["type"]][r["date"]].append(r["interest"])
+        month = r["date"][:7]  # YYYY-MM
+        type_month_vals[r["type"]][month].append(r["interest"])
 
     fig = go.Figure()
     labels = {
@@ -1219,16 +1221,16 @@ def chart_trends_functional_vs_baseline(trends_rows):
         "baseline": ("Generic THC/CBD Searches (avg)", "#DC2626"),
     }
     for typ, (label, color) in labels.items():
-        dates = type_date_vals.get(typ, {})
-        if not dates:
+        months = type_month_vals.get(typ, {})
+        if not months:
             continue
-        sorted_dates = sorted(dates.keys())
-        avg_vals = [sum(dates[d]) / len(dates[d]) for d in sorted_dates]
+        sorted_months = sorted(months.keys())
+        avg_vals = [sum(months[m]) / len(months[m]) for m in sorted_months]
         fig.add_trace(go.Scatter(
-            x=sorted_dates, y=avg_vals, name=label,
+            x=sorted_months, y=avg_vals, name=label,
             mode="lines",
             line=dict(color=color, width=3),
-            hovertext=[f"<b>{label}</b><br>{d}: {v:.0f}" for d, v in zip(sorted_dates, avg_vals)],
+            hovertext=[f"<b>{label}</b><br>{m}: {v:.0f}" for m, v in zip(sorted_months, avg_vals)],
             hoverinfo="text",
         ))
 
@@ -1236,7 +1238,7 @@ def chart_trends_functional_vs_baseline(trends_rows):
         title="Google Trends: Functional THC vs Generic THC Searches<br>"
               "<sup>Are consumers increasingly searching for THC with specific benefits (sleep, pain, anxiety) vs just 'THC gummies'? "
               "Source: Google Trends, US, 5yr.</sup>",
-        xaxis_title="Week", yaxis_title="Relative Interest (0–100)",
+        xaxis_title="Month", yaxis_title="Relative Interest (0–100)",
         height=450, template="plotly_white",
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
